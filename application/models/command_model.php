@@ -5,6 +5,8 @@ class Command_model extends CI_Model {
     var $name = '';
     var $details   = '';
     var $parameters   = '';
+    var $custom = '';
+    var $information = '';
 
     function __construct()
     {
@@ -35,6 +37,8 @@ class Command_model extends CI_Model {
         $this->name = $_POST['name'];
         $this->details   = $_POST['details'];
         $this->parameters   = $_POST['parameters'];
+        $this->custom   = $_POST['custom'];
+        $this->information   = $_POST['information'];
 
         $this->db->insert('command', $this);
     }
@@ -44,6 +48,8 @@ class Command_model extends CI_Model {
         $this->name = $_POST['name'];
         $this->details   = $_POST['details'];
         $this->parameters   = $_POST['parameters'];
+        $this->custom   = $_POST['custom'];
+        $this->information   = $_POST['information'];
 
         $this->db->update('command', $this, array('id' => $_POST['id']));
     }

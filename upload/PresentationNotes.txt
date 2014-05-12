@@ -1,0 +1,148 @@
+Slide 0
+
+Sunumunu baslat. Topic'ten bahset… Kendinden bahset… Genel olarak neler yaptigindan bahset…  STM'den bahset ve farkliliklardan bahset...
+
+Slide 1
+
+Bugun size anlatmak istedigim konulara soyle bakarsak sirasiyla diyerek basla… ve anlat… Demo olan bolumleri teker teker soyle… Ornek kodlar olacagini soyle...
+
+Slide 2
+
+Gercek zamanli web uygulamalarinin ne oldugunu anlat. Low latency'den bahset… ajax'dan farkini anlat...
+
+Slide 3
+
+Simdi sirasiyla size ornekleri gostermek istiyorum… Ilk ornegimiz, herkesin tahmin edecegi gibi bir chat uygulamasi… live chat...
+
+Slide 4
+
+Tabiki multiplayer oyunlar.. her oyuncunun yapmis oldugu hareketlerin aninda diger oyunculara gitmesi gerekiyor...
+
+Slide 5
+
+Borsa ve finans uygulamalari… Surekli degisen hisse senedi fiyatlari yine gercek zamanli uygulamalara ornek...
+
+Slide 6
+
+Son iki senedir populer olan gercek zamanli analitikler… Anlik olarak web sitesini ziyaret edenlerle ilgili istatistikler verir
+
+Slide 7
+
+Ortak calisma alanlari (Collaboration) … mesela ornekteki gibi bir mockup tasarimi yapilirken hem beraber tasarlanmasi hemde mockup'in konusulmasi...
+
+Slide 8
+
+Aktivite akimlari… aslinda twitter ile gelen bir yapi. artik bircok yerde gorebiliyoruz… bu da tamamen gercek zamanli olarak calismakta...
+
+Slide 9
+
+Simdi size gercek zamanli bir web uygulamasini orneklemek icin benim begendigim bir startup'i anlatip onun tasarimini ve basitce kodlamasini yapmak istiyorum… Olark'i anlat…
+
+Slide 10
+
+Olark'in ozelliklerini sirala… En onemli ozelligi olan web'den jabber client ile erisimini anlat… ayrica basit olarak web istatistiklerini de gosterdigini anlat...
+
+Slide 11
+
+Ornek resmi anlat… ve hangi detaylari gosterebildigini teker teker soyle… tabiki bu kullanmis oldugu teknolojilerle beraber oldugunu soyle...
+
+Slide 12
+
+Genel mimariyi detaylica anlat… oncelikle websocket'ten basla ardindan devam et… tabiki basit bir mimariden bahsettigimizi soyle…  burada herhangi bir gecici veya kalici bir veritabani bulunmadigindan bahset… Simdi size bu mimariyi teker teker anlatip olusturmaya calisacagini anlat.
+
+Slide 13
+
+Oncelikle client tarafindan baslarsak websocket ile baslayacagini anlat… Websocket'in ozelliklerini teker teker anlat. Ozellikle Ajax ve Ajax Long Polling arasindaki farki anlat… Simdi birazda nasil kodlandigini anlat...
+
+Slide 14
+
+Ilk ornegimiz bizim browser'imiz HTML 5 destekli ve WebSocket destekliyorsa, nasil calistirabilecegimizi ve kod detayini anlat...
+
+Slide 15
+
+Ikinci olarak web-socket-js'i anlat. neden ihtiyac duydugumuzu soyle. browser desteklemesse web-socket-js tarafindan flash socket'i kullanarak ayni websocket api'yi kullanabilecegimizi anlat.
+
+Slide 16
+
+Kod ornegini ve ozellikle api'in tamamen ayni oldugunu anlat...
+
+Slide 17
+
+Simdi ise artik client tarafini halletigimizi, artik bu web socketi karsilayabilecek bir websocket server'a ihtiyacimiz oldugunu anlat… burada neden asenkron i/o bir web server'a ihtiyacimiz oldugunu low latency ornegiyle beraber anlat… Daha sonra teker teker python ve ruby'deki kutuphaneleri sirala...
+
+Slide 18
+
+Oncelikle Python'dan basla… Python'da oldukca iyi bir Asenkron I/O calisan tornado web server'i anlat. Friendfeed'in gucunu aldigi bir web server'dir… Kodu anlat… teker teker iyice anlat...
+
+Slide 19
+
+Sonra ruby'den bahset… Ruby'deki eventmachine anlat… yine asenkron i'o calistigini soyle… sonra kodu anlat… cok benzer olduklarini soyle...
+
+Slide 20
+
+Simdi kodlari teker teker ac ve calistir… python ile websocket-js, ruby ile websocket dikkatli ol…
+
+Slide 21
+
+Simdi ise gelen mesajlarin kontrolu saglayan, bir mesaj kuyrugu yapisi olan rabbitmq 'yu anlat… detaylarini teker teker anlat… niye ihtiyac duydugumuzu soyle… kendi tecrubeni yani process queue olarak kullandigini ve cok memnun oldugunu soyle… butun ozelliklerini guzelce detaylandirarak anlat...
+
+
+Slide 22
+
+Yine rabbitmq'ya erisebilmek icin uygun olan python ve ruby'deki kutuphaneler anlat kisaca… her ikiside asenkron calisabildigini soyle...
+
+Slide 23
+
+Pika'nin publisher kismini anlatmaya basla… teker teker her bir satiri anlat… buradan mesajlarin gonderildigini ve kuyruga girdigini anlat...
+
+Slide 24
+
+Pika'nin subscriber yani mesajalri kuyruk yapisindan alip isleyen yerlerdir… buradaki kod yapisini anlat… ozellikle callback kismini anlat...
+
+Slide 25
+
+Ruby'de bu islerin nasil olarak anlatildigini anlat… teker teker kodlari anlat...
+
+Slide 26
+
+Ikinci kodda ise bir tane mesaj yollandiginda bu mesaji uc farkli mesaj alici tarafindan alindigi bir ornegi goster… kodu anlat… 
+
+Slide 27
+
+RabbitMQ'daki ornegi hem python da hem de kodda anlat… demoyu calistir… rabbitmq'nun vagrant'ta olusturulmus olan bir sanal makinede oldugunu soyle…
+
+Slide 28
+
+Artik mimarinin son bolumu olan XMPP kismini anlat… xmpp protikolunu anlat… burada xmpp'yi kullanmanin tek amacinin jabber client'a yani gtalk gibi bir client mesaj yollamak odlugunu anlat… teker teker ozelliklerini soyle… aslinda rabbitmq gibi bir mesaj kuyrugu yapisina da sahip oldugunu soyle… orneklerini anlat...
+
+Slide 29
+
+genel mimariden bahset… merkezi olmadigini, tamamen lokal merkezlerin olustugu ve birbirleriyle haberlesildigini bir ornek ile anlat… ahmet@jabber.org ile mehmet@gmail.com nasil haberlestigini anlat...
+
+Slide 30
+
+xmpp'yi kullanabilmemizi saglayan client'lari anlat… iste python da bu ruby de su var fln de...
+
+Slide 31
+
+sonra python kismini anlat…  kodlari ayrintili bir sekilde anlat...
+
+Slide 32
+
+ruby kismini anlat...
+
+Slide 33
+
+ve son olarak artik olark'a benzer basit bir yapiyi anlat… yani web'den jabber client'a nasil aktarildigini anlat… ve ruby'de yazildigini python'a zaman kalmadigini ancak devam edip onunda tamamlanacagini ve demoyu anlat…  github'dan takip edebilirsiniz de...
+
+Slide 34
+
+sonucu anlat… teker teker ozetle...
+
+Slide 35
+
+varsa sorusu olanlari duymaktan memnuniyet duyacagini soyle...
+
+Slide 36
+
+boyle iyi bir izleyiciye konusmanin bir zevk oldugunu soyle… beni dinlediginiz icin tesekkur et…

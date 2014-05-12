@@ -1,0 +1,418 @@
+seyma@seyma-HP-EliteBook-8540w:~$ sudo apache
+apache2     apache2ctl  apachectl   
+seyma@seyma-HP-EliteBook-8540w:~$ sudo apache
+apache2     apache2ctl  apachectl   
+seyma@seyma-HP-EliteBook-8540w:~$ sudo apachectl restart
+[sudo] password for seyma: 
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to suppress this message
+seyma@seyma-HP-EliteBook-8540w:~$ cd /var/www
+seyma@seyma-HP-EliteBook-8540w:/var/www$ ls
+first.php  js  nbproject  upload_file.php  write_file.php
+seyma@seyma-HP-EliteBook-8540w:/var/www$ nano info.php
+seyma@seyma-HP-EliteBook-8540w:/var/www$ mysql --user=root
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+seyma@seyma-HP-EliteBook-8540w:/var/www$ mysql --user=root -p
+Enter password: 
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+seyma@seyma-HP-EliteBook-8540w:/var/www$ mysql --user
+mysql: option '--user' requires an argument
+seyma@seyma-HP-EliteBook-8540w:/var/www$ mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 38
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| test               |
++--------------------+
+2 rows in set (0.00 sec)
+
+mysql> exit;
+Bye
+seyma@seyma-HP-EliteBook-8540w:/var/www$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 39
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.07 sec)
+
+mysql> exit
+Bye
+seyma@seyma-HP-EliteBook-8540w:/var/www$ nautilus
+seyma@seyma-HP-EliteBook-8540w:/var/www$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 40
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> create database linux_commands;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| linux_commands     |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use linux_commands;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> exit
+Bye
+seyma@seyma-HP-EliteBook-8540w:/var/www$ mysql --user=root -p -h localhost linux_commands < /home/seyma/
+.bash_history                        mysql-5.6.16-debian6.0-x86_64.deb
+.bash_logout                         mysql-5.6.16-debian6.0-x86_64.deb.1
+.bashrc                              .mysql_history
+.cache/                              .nbi/
+.compiz/                             .netbeans/
+.config/                             netbeans-7.4/
+.dbus/                               .nv/
+deneme.php                           Pictures/
+Desktop/                             .profile
+Django-1.6.1/                        Public/
+.dmrc                                .sage/
+Documents/                           SeymaBash/
+Downloads/                           SKorkmaz/
+examples.desktop                     SKorkmaz.zip
+.gconf/                              Templates/
+glassfish-4.0/                       .thunderbird/
+.gstreamer-0.10/                     Ubuntu One/
+.gvfs/                               user/
+helloworld.sh                        Videos/
+.ICEauthority                        .viminfo
+.icons/                              www/
+index.html                           www.7z
+.java/                               www.tar.gz
+.kde/                                www.zip
+--More--                    ^C
+seyma@seyma-HP-EliteBook-8540w:/var/www$ cd /home/seyma/
+seyma@seyma-HP-EliteBook-8540w:~$ ls
+deneme.php        helloworld.sh                        Public        Videos
+Desktop           index.html                           SeymaBash     www
+Django-1.6.1      Music                                SKorkmaz      www.7z
+Documents         mysql-5.6.16-debian6.0-x86_64.deb    SKorkmaz.zip  www.tar.gz
+Downloads         mysql-5.6.16-debian6.0-x86_64.deb.1  Templates     www.zip
+examples.desktop  netbeans-7.4                         Ubuntu One
+glassfish-4.0     Pictures                             user
+seyma@seyma-HP-EliteBook-8540w:~$ cd Desktop/
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ ls
+delete.txt   helloworld.sh                   ozellikler.txt
+delete.txt~  helloworld.sh~                  PHP_Linux.mwb
+EkranKarti   NVIDIA-Linux-x86_64-331.20.run  php_linux.sql
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p -h localhost linux_commands < /home/seyma/Desktop/php_linux.sql 
+Enter password: 
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 43
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| linux_commands     |
+| mydb               |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use linux_commands;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> exit
+Bye
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p  linux_commands < /home/seyma/Desktop/php_linux.sql Enter password: 
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 45
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use linux_commands;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> exit
+Bye
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p  linux_commands < php_linux.sql 
+Enter password: 
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 47
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| linux_commands     |
+| mydb               |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use linux_commands;
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> exit
+Bye
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ ls
+delete.txt  delete.txt~  EkranKarti  helloworld.sh  helloworld.sh~  NVIDIA-Linux-x86_64-331.20.run  ozellikler.txt  PHP_Linux.mwb  php_linux.sql
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 48
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use mydb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_mydb |
++----------------+
+| Command        |
+| FollowerUser   |
+| Script         |
+| ScriptCommand  |
+| ScriptRating   |
+| Share          |
+| User           |
++----------------+
+7 rows in set (0.00 sec)
+
+mysql> drop database mydb;
+Query OK, 7 rows affected (0.33 sec)
+
+mysql> exit;
+Bye
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p  linux_commands < php_linux.sql 
+Enter password: 
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 50
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| linux_commands     |
+| mydb               |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use mydb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_mydb |
++----------------+
+| Command        |
+| FollowerUser   |
+| Script         |
+| ScriptCommand  |
+| ScriptRating   |
+| Share          |
+| User           |
++----------------+
+7 rows in set (0.00 sec)
+
+mysql> describe User;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(250) | YES  |     | NULL    |                |
+| surname       | varchar(250) | YES  |     | NULL    |                |
+| username      | varchar(200) | YES  |     | NULL    |                |
+| password      | varchar(200) | YES  |     | NULL    |                |
+| date_added    | datetime     | YES  |     | NULL    |                |
+| date_modified | datetime     | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+mysql> exit
+Bye
+seyma@seyma-HP-EliteBook-8540w:~/Desktop$ cd /var/www
+seyma@seyma-HP-EliteBook-8540w:/var/www$ ls
+first.php  info.php  js  nbproject  upload_file.php  write_file.php
+seyma@seyma-HP-EliteBook-8540w:/var/www$ nautilus
+seyma@seyma-HP-EliteBook-8540w:/var/www$ ls
+first.php  info.php  js  linuxcommands  nbproject  upload_file.php  write_file.php
+seyma@seyma-HP-EliteBook-8540w:/var/www$ cd linuxcommands/
+seyma@seyma-HP-EliteBook-8540w:/var/www/linuxcommands$ ls
+linuxcommands
+seyma@seyma-HP-EliteBook-8540w:/var/www/linuxcommands$ mysql --user=root -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 52
+Server version: 5.5.34-0ubuntu0.13.10.1 (Ubuntu)
+
+Copyright (c) 2000, 2013, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> use mydb;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------+
+| Tables_in_mydb |
++----------------+
+| Command        |
+| FollowerUser   |
+| Script         |
+| ScriptCommand  |
+| ScriptRating   |
+| Share          |
+| User           |
++----------------+
+7 rows in set (0.00 sec)
+
+mysql> describe User;
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(250) | YES  |     | NULL    |                |
+| surname       | varchar(250) | YES  |     | NULL    |                |
+| username      | varchar(200) | YES  |     | NULL    |                |
+| password      | varchar(200) | YES  |     | NULL    |                |
+| date_added    | datetime     | YES  |     | NULL    |                |
+| date_modified | datetime     | YES  |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
+mysql> insert into User(name,surname,username,password) values('seyma','korkmaz','seyma','12345');
+Query OK, 1 row affected (0.10 sec)
+
+mysql> exit
+Bye
+seyma@seyma-HP-EliteBook-8540w:/var/www/linuxcommands$ 

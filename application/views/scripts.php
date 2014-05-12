@@ -42,15 +42,22 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="/linuxcommands/index.php/user/dashboard">Home</a></li>
+          </ul>
+           <ul class="nav navbar-nav">
+            <li><a href="/linuxcommands/index.php/linux/newcommand">New Command</a></li>
+          </ul>
+           <ul class="nav navbar-nav">
+            <li class="active"><a href="/linuxcommands/index.php/script/load_scripts">Scripts</a></li>
+          </ul>
+          <ul class="nav navbar-nav">
+            <li><a href="/linuxcommands/index.php/social/load_shares/<?php echo $user_id; ?>">Socialize</a></li>
           </ul>
         <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal: <?php echo $username; ?> <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Custom Commands</a></li>
-            <li><a href="#">Custom Scripts</a></li>
+            <li><a href="/linuxcommands/index.php/profile/load_profile">Profile</a></li>
             <li class="divider"></li>
             <li><a href="/linuxcommands/index.php/user/logout">Logout</a></li>
           </ul>
@@ -62,9 +69,33 @@
 
     <!-- Begin page content -->
     <div class="container">
-      <input name="command_txt" type="text" class="form-control" placeholder="Type a Command" data-provide="typeahead"> <br/>
-      <ul id="linuxCommandsTags"></ul>
-      <pre><code id="terminal">linux$ </code></pre>
+      <?php if(count($scripts) > 0): ?>
+        <table class="table table-condensed table-striped table-bordered table-hover">
+        <tr>
+        <th id="wall_userNameStyle">Scripts</th>
+        <th id="wall_userNameStyle">Run</th>
+        <th id="wall_userNameStyle">Delete</th>
+        </tr>
+
+        <?php
+        foreach($scripts as $scr)
+        {
+        ?>
+        <tr>
+        <td><?php echo $scr->name; ?></td>
+        <td><a href="/linuxcommands/index.php/linux/run_script/<?php echo $scr->id; ?>" id="run_script" type="button" class="btn btn-default btn-xs">
+              <span class="glyphicon glyphicon-tasks"></span></td>
+        <td>
+          <a href="/linuxcommands/index.php/script/delete_script/<?php echo $scr->id; ?>" id="delete_script" type="button" class="btn btn-default btn-xs">
+              <span class="glyphicon glyphicon-remove"></span>
+          </a>
+        </td> 
+        </tr>
+        <?php } ?>
+        </table>
+      <?php else: ?>
+        <h3>No script data </h3>
+      <?php endif; ?>
     </div>
 
     <div id="footer">
@@ -80,9 +111,12 @@
     <script src="/linuxcommands/public/js/json2.js"></script>
     <script src="/linuxcommands/public/js/jquery.min.js"></script>
     <script src="/linuxcommands/public/js/jquery-ui.min.js"></script>
+    <script src="/linuxcommands/public/js/jquery.block.ui.js"></script>
+    <script src="/linuxcommands/public/js/jquery.form.min.js"></script>
     <script src="/linuxcommands/public/js/bootstrap.min.js"></script>
     <script src="/linuxcommands/public/js/highlight.pack.js"></script>
     <script src="/linuxcommands/public/js/tag-it.min.js" type="text/javascript"></script>
+    <script src="/linuxcommands/public/js/select2.min.js"></script>
     <script src="/linuxcommands/public/js/bootstrap-typehead.min.js" type="text/javascript"></script>
     <script src="/linuxcommands/public/js/linux.js"></script>
   </body>

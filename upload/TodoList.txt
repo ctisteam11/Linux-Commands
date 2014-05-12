@@ -1,0 +1,20 @@
+TodoList:
+
+- Cemal Kaptan'a nasil document manager ile ilgili hataya ulastigi sorulacak (Tamamlandi)
+- Document Manager Ground'da butun tree kapali olsun (Tamamlandi)
+	* Cozum 	$("#navigation").treeview({collapsed: true});
+- Document Manager'da Zip ile dosya aktarimi gerceklestirilsin
+	* Directory isimleri ile kategoriler eslestirilecek.
+	* Her directory'nin icerisindeki dokumanlar, kategoriler ile eslestirilecek
+- Document Manager offline upload'daki tum sorunlar cozulecek
+- Charts'da menu iconlari kuculecek (Tamamlandi)
+- Charts'da bir kez tiklanirsa o tab secilecek, eger o tab aktifse menu acilacak (Tamamlandi)
+- Charts'da acilan tab'lerdeki datalar yuklenecek (Tamamlandi)
+	* Airports icin web'den alinacak ve local ile karsilastirilip gosterilecek (Tamamlandi)
+		- Secilen airport indirilmemisse indirilecek (Tamamlandi)
+		- Secilen airport aktif hale getirilerek diger degerlerde degisecek (Tamamlandi)
+	* Diger sekmeler icin database'lerden alinacak (Tamamlandi)
+- Charts'ta sag taraftaki kisimda PSPDFKit gosterilecek (PSPDFKit update edilecek) (Tamamlandi)
+- Load & Trim Sheet'te yerler ve isimler degisecek (Tamamlandi)
+- Ground Web ve Web Service aktarimi (Tamamlandi)
+- Database aktarimi (Tamamlandi)
